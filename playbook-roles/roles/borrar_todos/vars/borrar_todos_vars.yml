@@ -1,2 +1,2 @@
-script_name: borrarTodo.sh
+script_name: /opt/IVIS/Consultas/Borrar/borrarTodo.sh
 working_directory: /opt/IVIS/Consultas/Borrar
