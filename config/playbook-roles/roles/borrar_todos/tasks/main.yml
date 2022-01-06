@@ -1,0 +1,9 @@
+- name: Include variables
+  include_vars: borrar_todos_vars.yml
+  no_log: true
+
+- name: Ejecutar Script "{{ script_name }}"
+  become: True
+  shell:
+    cmd: "{{ script_name }}"
+    chdir: "{{ working_directory }}"

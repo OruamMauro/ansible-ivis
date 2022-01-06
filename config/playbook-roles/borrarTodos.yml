@@ -1,0 +1,7 @@
+- name: Borrar Todos
+  hosts: linux.sub01042306320.vcnivis.oraclevcn.com
+  gather_facts: no
+  vars:
+    server_env: "{{ env }}"
+  roles:
+    - borrar_todos
