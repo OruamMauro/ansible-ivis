@@ -1,0 +1,8 @@
+- name: Include variables
+  include_vars: gen_consultas_vars.yml
+  no_log: true
+
+- name: Generar Consultas "{{ nombre_consulta }}"
+  become: True
+  shell:
+    cmd: "{{ script_name }}" -n "{{ nombre_consulta }}" -t "{{ tipo_consulta }}" 2>&1 > /dev/null

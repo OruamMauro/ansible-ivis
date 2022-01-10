@@ -1,0 +1,8 @@
+- name: Generar Consultas
+  hosts: linux.sub01042306320.vcnivis.oraclevcn.com
+  gather_facts: no
+  vars:
+    nombre_consulta: "{{ nombre_consulta_survey }}"
+    tipo_consulta: "{{ tipo_consulta_survey }}"
+  roles:
+    - generar_consultas
