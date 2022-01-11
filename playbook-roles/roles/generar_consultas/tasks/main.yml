@@ -4,5 +4,4 @@
 
 - name: Generar Consultas "{{ nombre_consulta }}"
   become: True
-  command: "{{ script_name }} -n {{ nombre_consulta }} -t {{ tipo_consulta }} 2>&1 > /dev/null"
-  register: mi_salida
+  raw: "{{ script_name }} -n {{ nombre_consulta }} -t {{ tipo_consulta }} 2>&1 > /dev/null"
