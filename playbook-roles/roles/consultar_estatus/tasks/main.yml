@@ -4,8 +4,7 @@
 
 - name: Consultar Estatus de "{{ nombre_consulta }}"
   become: True
-  command:
-    free_form: "{{ script_name }} -n {{ nombre_consulta }}"
+  raw: "{{ script_name }} -n {{ nombre_consulta }}"
   register: salida_tail
 
 - name: Mostrar el estatus de "{{ nombre_consulta }}"
