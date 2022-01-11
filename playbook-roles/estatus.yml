@@ -1,0 +1,7 @@
+- name: Consultar Estatus
+  hosts: linux.sub01042306320.vcnivis.oraclevcn.com
+  gather_facts: no
+  vars:
+    nombre_consulta: "{{ nombre_consulta_survey }}"
+  roles:
+    - consultar_estatus

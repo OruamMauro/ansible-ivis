@@ -1,0 +1,12 @@
+- name: Include variables
+  include_vars: consultar_estatus_vars.yml
+  no_log: true
+
+- name: Consultar Estatus de "{{ nombre_consulta }}"
+  become: True
+  command:
+    raw: "{{ script_name }} -n {{ nombre_consulta }}"
+  register: salida_tail
+
+- debug:
+    var: salida_tail
