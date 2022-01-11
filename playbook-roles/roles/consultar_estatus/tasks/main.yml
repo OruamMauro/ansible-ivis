@@ -9,4 +9,4 @@
 
 - name: Mostrar el estatus de "{{ nombre_consulta }}"
   debug:
-    var: salida_tail
+    var: salida_tail.stdout_lines
