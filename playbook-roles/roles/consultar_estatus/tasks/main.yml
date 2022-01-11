@@ -10,4 +10,3 @@
 - name: Mostrar el estatus de "{{ nombre_consulta }}"
   debug:
     var: salida_tail
-    verbosity: 2
