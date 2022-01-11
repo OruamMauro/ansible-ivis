@@ -8,5 +8,7 @@
     free_form: "{{ script_name }} -n {{ nombre_consulta }}"
   register: salida_tail
 
-- debug:
+- name: Mostrar el estatus de "{{ nombre_consulta }}"
+  debug:
     var: salida_tail
+    verbosity: 2
