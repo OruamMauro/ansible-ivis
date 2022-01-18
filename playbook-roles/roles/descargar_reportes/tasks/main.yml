@@ -1,0 +1,7 @@
+- name: Include variables
+  include_vars: descargar_reportes_vars.yml
+  no_log: true
+
+- name: Descargar Reportes de "{{ prefijo_reporte }}"
+  become: True
+  raw: "{{ script_name }} -n {{ prefijo_reporte }} 2>&1 > /dev/null"

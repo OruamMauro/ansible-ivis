@@ -1,0 +1,7 @@
+- name: Generar Consultas
+  hosts: linux.sub01042306320.vcnivis.oraclevcn.com
+  gather_facts: no
+  vars:
+    prefijo_reporte: "{{ prefijo_reporte_survey }}"
+  roles:
+    - descargar_reportes
