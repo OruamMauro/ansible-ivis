@@ -1,0 +1,9 @@
+- name: Include variables
+  include_vars: juntar_reportes_vars.yml
+  no_log: true
+
+- name: Juntar Reportes de "{{ nombre_reporte }}"
+  become: True
+  shell: "{{ script_name }} -n {{ nombre_reporte }}"
+  args:
+    executable: /bin/bash
