@@ -4,6 +4,4 @@
 
 - name: Generar Consultas "{{ nombre_consulta }}"
   become: True
-  shell: "{{ script_name }} -n {{ nombre_consulta }} -t {{ tipo_consulta }} 2>&1 > /dev/null"
-  args:
-    executable: /bin/bash
+  raw: "{{ script_name }} -n {{ nombre_consulta }} -t {{ tipo_consulta }} 2>&1 > /dev/null"
