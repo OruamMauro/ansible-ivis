@@ -4,6 +4,7 @@
 
 - name: Ejecutar Script "{{ script_name }}"
   become: True
-  shell:
-    cmd: "{{ script_name }}"
-    chdir: "{{ working_directory }}"
+  shell: "{{ script_name }}"
+  chdir: "{{ working_directory }}"
+  args:
+    executable: /bin/bash
