@@ -4,6 +4,7 @@
 
 - name: Consultar Estatus de "{{ nombre_consulta }}"
   become: True
+  become_user: userapp
   shell: "{{ script_name }} -n {{ nombre_consulta }}"
   args:
     executable: /bin/bash

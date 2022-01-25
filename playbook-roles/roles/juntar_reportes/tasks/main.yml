@@ -4,6 +4,7 @@
 
 - name: Juntar Reportes de "{{ nombre_reporte }}"
   become: True
+  become_user: userapp
   shell: "{{ script_name }} -n {{ nombre_reporte }}"
   args:
     executable: /bin/bash

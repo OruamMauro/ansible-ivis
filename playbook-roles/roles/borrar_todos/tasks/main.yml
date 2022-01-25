@@ -4,6 +4,7 @@
 
 - name: Ejecutar Script "{{ script_name }}"
   become: True
+  become_user: userapp
   shell: "{{ script_name }}"
   chdir: "{{ working_directory }}"
   args:
