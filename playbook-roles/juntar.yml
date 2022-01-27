@@ -1,5 +1,5 @@
 - name: juntar Reportes Excel
-  hosts: linux.sub01042306320.vcnivis.oraclevcn.com
+  hosts: "{{ hostname }}".sub01042306320.vcnivis.oraclevcn.com
   gather_facts: no
   vars:
     nombre_reporte: "{{ nombre_reporte_survey }}"
