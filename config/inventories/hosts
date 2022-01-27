@@ -1,3 +1,4 @@
 app_server:
   hosts:
     linux.sub01042306320.vcnivis.oraclevcn.com:
+    linuxworker01.sub01042306320.vcnivis.oraclevcn.com:
